@@ -4,6 +4,14 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop05 World!");
+        //TODO does this need to be a loop
+        bool continueRunning = true;
+        while (continueRunning)
+        {
+            var menu = new MainMenu();
+            menu.ShowMenu();
+            var menuItem = menu.GetMenuOption();
+            menu.RunMenuOption(menuItem);
+        }
     }
 }
